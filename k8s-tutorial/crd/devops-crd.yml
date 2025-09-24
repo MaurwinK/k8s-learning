@@ -1,0 +1,39 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: mkplays.playwithmk.com
+spec:
+  group: playwithmk.com
+  names:
+    plural: mkplays
+    singular: mkplay
+    kind: mkPlays
+    shortNames:
+      - piro
+      - khelo
+  scope: Namespaced
+  versions: 
+  - name: v1
+    served: true
+    storage: true
+    schema: 
+      openAPIV3Schema:
+        type: object
+        properties: 
+          spec:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "This is the name of the MK channel"
+              duration:
+                type: string
+                description: "This is the duration of the video"
+              mode:
+                type: string
+                description: "This is the mode of the stream eg. LAN/Online"
+              platform:
+                type: string
+                description: "This is the platform of the stream" 
+
+

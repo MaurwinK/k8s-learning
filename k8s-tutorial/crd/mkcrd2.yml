@@ -1,0 +1,9 @@
+kind: mkPlays
+apiVersion: playwithmk.com/v1
+metadata:
+  name: second-live-stream
+spec:
+  name: Welcome to the Stream
+  duration: 3 hours in the morning and evening
+  platform: Twitch
+  mode: LAN
